@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#recycleradapter" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -437,9 +442,40 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RecyclerAdapter
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="RecyclerAdapter" class="md-nav__link md-nav__link--active">
       RecyclerAdapter
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recycleradapter" class="md-nav__link">
+    RecyclerAdapter
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -911,6 +947,36 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recycleradapter" class="md-nav__link">
+    RecyclerAdapter
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -926,7 +992,247 @@
                 
                   <h1>RecyclerAdapter</h1>
                 
-                
+                <h3 id="recycleradapter">RecyclerAdapter<a class="headerlink" href="#recycleradapter" title="Permanent link">&para;</a></h3>
+<p>Card view의 정보를 채워서 list로 띄워주는 역할을 한다.</p>
+<h4>card view info 정보를 담는 변수</h4>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RecyclerAdapter</span> <span class="kd">extends</span> <span class="n">RecyclerView</span><span class="p">.</span><span class="na">Adapter</span><span class="o">&lt;</span><span class="n">RecyclerAdapter</span><span class="p">.</span><span class="na">MyViewHolder</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Filterable</span> <span class="p">{</span>
+   <span class="c1">// for card view info</span>
+    <span class="kd">private</span> <span class="n">Context</span> <span class="n">context</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">StuffInfo</span><span class="o">&gt;</span> <span class="n">stuff</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">type</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">StuffInfo</span><span class="o">&gt;</span> <span class="n">tempListAll</span><span class="p">;</span>
+</code></pre></div>
+
+<h4>card view에 이미지 띄워주기 위한 변수</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// for getting link image</span>
+<span class="kd">private</span> <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
+<span class="kd">private</span> <span class="n">String</span> <span class="n">contents</span><span class="p">;</span>
+<span class="kd">private</span> <span class="n">String</span> <span class="n">imageUrl</span><span class="p">;</span>
+</code></pre></div>
+
+<h4>Construct</h4>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="nf">RecyclerAdapter</span><span class="p">(</span><span class="n">Context</span> <span class="n">context</span><span class="p">,</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">StuffInfo</span><span class="o">&gt;</span> <span class="n">stuff</span><span class="p">,</span>  <span class="n">String</span> <span class="n">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">context</span> <span class="o">=</span> <span class="n">context</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">stuff</span> <span class="o">=</span> <span class="n">stuff</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">type</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">tempListAll</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">stuff</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4>xml 연결하기</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//* setting the view</span>
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">RecyclerAdapter</span><span class="p">.</span><span class="na">MyViewHolder</span> <span class="nf">onCreateViewHolder</span><span class="p">(</span><span class="n">ViewGroup</span> <span class="n">parent</span><span class="p">,</span> <span class="kt">int</span> <span class="n">viewType</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">View</span> <span class="n">v</span><span class="p">;</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">LayoutInflater</span><span class="p">.</span><span class="na">from</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="na">inflate</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">list_item</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="n">MyViewHolder</span> <span class="n">vHolder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyViewHolder</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">vHolder</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4>하나의 카드뷰에 대한 모든 기능에 대한 변수들</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//* 화면에 띄울 변수들</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyViewHolder</span> <span class="kd">extends</span> <span class="n">RecyclerView</span><span class="p">.</span><span class="na">ViewHolder</span> <span class="p">{</span>
+    <span class="n">TextView</span> <span class="n">stuffTitle</span><span class="p">;</span>
+    <span class="n">TextView</span> <span class="n">stuffDate</span><span class="p">;</span>
+    <span class="n">TextView</span> <span class="n">stuffPlace</span><span class="p">;</span>
+    <span class="n">TextView</span> <span class="n">stuffPrice</span><span class="p">;</span>
+    <span class="n">TextView</span> <span class="n">stuffPeopleNum</span><span class="p">;</span>
+    <span class="n">TextView</span> <span class="n">stuffUrlTitle</span><span class="p">;</span>
+    <span class="n">ImageView</span> <span class="n">stuffImage</span><span class="p">;</span>
+    <span class="n">RelativeLayout</span> <span class="n">expandLayout</span><span class="p">;</span>
+    <span class="n">RelativeLayout</span> <span class="n">previewLayout</span><span class="p">;</span>
+    <span class="n">RelativeLayout</span> <span class="n">postLayout</span><span class="p">;</span>
+    <span class="n">ImageButton</span> <span class="n">enterButton</span><span class="p">;</span>
+</code></pre></div>
+
+<h4>카드뷰에 띄워줄 정보와 카드뷰 layout 구성</h4>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="nf">MyViewHolder</span><span class="p">(</span><span class="kd">final</span> <span class="n">View</span> <span class="n">itemView</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">super</span><span class="p">(</span><span class="n">itemView</span><span class="p">);</span>
+
+    <span class="c1">//* for displaying screen info</span>
+    <span class="n">stuffTitle</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_title_textview</span><span class="p">);</span>
+    <span class="n">stuffDate</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_date_textview</span><span class="p">);</span>
+    <span class="n">stuffPlace</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_place_textview</span><span class="p">);</span>
+    <span class="n">stuffPrice</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_cost_textview</span><span class="p">);</span>
+    <span class="n">stuffPeopleNum</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_pplnumber_textview</span><span class="p">);</span>
+    <span class="n">stuffUrlTitle</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_preview_tv1</span><span class="p">);</span>
+    <span class="n">stuffImage</span> <span class="o">=</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_preview_iv</span><span class="p">);</span>
+
+    <span class="n">expandLayout</span> <span class="o">=</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">expandable_layout</span><span class="p">);</span>
+</code></pre></div>
+
+<h4>링크를 눌렀을때, 웹으로 넘어가는 기능</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//* link -&gt; web</span>
+<span class="n">previewLayout</span> <span class="o">=</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_preview_layout</span><span class="p">);</span>
+<span class="n">previewLayout</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">view</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">openWeb</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">stuff</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">getAdapterPosition</span><span class="p">()).</span><span class="na">getStuffLink</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<h4>카드뷰를 눌렀을 때, 카드뷰가 확장되는 기능</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// expand card view when click it</span>
+<span class="n">postLayout</span> <span class="o">=</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_layout</span><span class="p">);</span>
+<span class="n">postLayout</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">view</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">StuffInfo</span> <span class="n">items</span> <span class="o">=</span> <span class="n">stuff</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">getAdapterPosition</span><span class="p">());</span>
+        <span class="n">items</span><span class="p">.</span><span class="na">setExpandable</span><span class="p">(</span><span class="o">!</span><span class="n">items</span><span class="p">.</span><span class="na">isExpandable</span><span class="p">());</span>
+        <span class="n">notifyItemChanged</span><span class="p">(</span><span class="n">getAdapterPosition</span><span class="p">());</span>
+
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<h4>카드뷰에 있는 enterButton을 눌렀을 경우, 해당 room에 user가 들어가고, room page로 넘어가게 하는 기능</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// when click the enterButton, enter the room</span>
+        <span class="n">enterButton</span> <span class="o">=</span> <span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">post_createbutton</span><span class="p">);</span>
+        <span class="n">enterButton</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="kd">final</span> <span class="n">View</span> <span class="n">view</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="p">(</span><span class="n">enterButton</span><span class="p">.</span><span class="na">getContext</span><span class="p">(),</span> <span class="n">ChattingActivity</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">position</span> <span class="o">=</span> <span class="n">getAdapterPosition</span><span class="p">();</span>
+                <span class="n">intent</span><span class="p">.</span><span class="na">putExtra</span><span class="p">(</span><span class="s">&quot;test_id&quot;</span><span class="p">,</span> <span class="n">stuff</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getRoomId</span><span class="p">());</span>
+                <span class="c1">//intent.putExtra(&quot;test_id&quot;,thing.get(getAdapterPosition()).getRoom_id());</span>
+                <span class="n">enterButton</span><span class="p">.</span><span class="na">getContext</span><span class="p">().</span><span class="na">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4>link를 눌렀을 때, web으로 연결해주는 함수</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//* link -&gt; web</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">openWeb</span><span class="p">(</span><span class="n">Context</span> <span class="n">context</span><span class="p">,</span> <span class="n">String</span> <span class="n">url</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">url</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;http://&quot;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">url</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;https://&quot;</span><span class="p">))</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;http://&quot;</span> <span class="o">+</span> <span class="n">url</span><span class="p">;</span>
+
+    <span class="c1">// Parse the URI and create the intent.</span>
+    <span class="n">Uri</span> <span class="n">webPage</span> <span class="o">=</span> <span class="n">Uri</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+    <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="na">ACTION_VIEW</span><span class="p">,</span> <span class="n">webPage</span><span class="p">);</span>
+
+    <span class="c1">// Find an activity to hand the intent and start that activity.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">intent</span><span class="p">.</span><span class="na">resolveActivity</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="na">getPackageManager</span><span class="p">())</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">context</span><span class="p">.</span><span class="na">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="s">&quot;Wrong Address. Try again.&quot;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+        <span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="s">&quot;ImplicitIntents&quot;</span><span class="p">,</span> <span class="s">&quot;Can&#39;t handle this intent!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4>카드뷰에 들어갈 필수 정보를 받아서 화면에 띄워주는 역할을 한다</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//* initial card view info</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onBindViewHolder</span><span class="p">(</span><span class="kd">final</span> <span class="n">MyViewHolder</span> <span class="n">holder</span><span class="p">,</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">position</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">holder</span><span class="p">.</span><span class="na">stuffTitle</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">stuff</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getTitle</span><span class="p">());</span>
+        <span class="n">holder</span><span class="p">.</span><span class="na">stuffDate</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">stuff</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getOrderDate</span><span class="p">());</span>
+        <span class="n">holder</span><span class="p">.</span><span class="na">stuffPlace</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">stuff</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getPlace</span><span class="p">());</span>
+        <span class="n">holder</span><span class="p">.</span><span class="na">stuffPrice</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">stuff</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getStuffCost</span><span class="p">());</span>
+        <span class="n">holder</span><span class="p">.</span><span class="na">stuffPeopleNum</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">stuff</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getNumUsers</span><span class="p">());</span>
+
+        <span class="cm">/*new Thread(){</span>
+<span class="cm">            public void run() {</span>
+<span class="cm">                String image_url = thing.get(position).getStuff_link();</span>
+<span class="cm">                Log.i(&quot;OGT&quot;, &quot;image_url:&quot;+image_url);</span>
+<span class="cm">                getOGTag(image_url);</span>
+
+<span class="cm">                // Display a png image from the specified file</span>
+<span class="cm">            }</span>
+<span class="cm">        }.start();*/</span>
+
+        <span class="c1">//holder.tv_url_title.setText(title);</span>
+        <span class="n">imageUrl</span> <span class="o">=</span> <span class="s">&quot;http://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/16170286697456-f844f74b-c213-4d44-a9a5-3f9a7b3237c2.jpg&quot;</span><span class="p">;</span>
+        <span class="n">Picasso</span><span class="p">.</span><span class="na">get</span><span class="p">().</span><span class="na">load</span><span class="p">(</span><span class="n">imageUrl</span><span class="p">).</span><span class="na">into</span><span class="p">(</span><span class="n">holder</span><span class="p">.</span><span class="na">stuffImage</span><span class="p">);</span>
+
+        <span class="kt">boolean</span> <span class="n">isExpandable</span> <span class="o">=</span> <span class="n">stuff</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">isExpandable</span><span class="p">();</span>
+        <span class="n">holder</span><span class="p">.</span><span class="na">expandLayout</span><span class="p">.</span><span class="na">setVisibility</span><span class="p">(</span><span class="n">isExpandable</span> <span class="o">?</span> <span class="n">View</span><span class="p">.</span><span class="na">VISIBLE</span> <span class="p">:</span> <span class="n">View</span><span class="p">.</span><span class="na">GONE</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4>카드뷰의 전체 개수를 반환하는 함수</h4>
+<div class="highlight"><pre><span></span><code> <span class="c1">//* the number of card view</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getItemCount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">stuff</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4>서치기능을 위한 filter선언</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//* for search</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Filter</span> <span class="nf">getFilter</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">filter</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//* for search</span>
+    <span class="n">Filter</span> <span class="n">filter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Filter</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//runs on background thread</span>
+        <span class="nd">@Override</span>
+        <span class="kd">protected</span> <span class="n">FilterResults</span> <span class="nf">performFiltering</span><span class="p">(</span><span class="n">CharSequence</span> <span class="n">charSequence</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">List</span><span class="o">&lt;</span><span class="n">StuffInfo</span><span class="o">&gt;</span> <span class="n">filteredList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">charSequence</span><span class="p">.</span><span class="na">toString</span><span class="p">().</span><span class="na">isEmpty</span><span class="p">()){</span>
+                <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;Searching&quot;</span><span class="p">,</span> <span class="s">&quot;is Empty&quot;</span><span class="p">);</span>
+                <span class="n">filteredList</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+            <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+                <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;Searching&quot;</span><span class="p">,</span> <span class="s">&quot;Text: &quot;</span> <span class="o">+</span> <span class="n">charSequence</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">StuffInfo</span> <span class="n">temp</span><span class="p">:</span> <span class="n">tempListAll</span><span class="p">)</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">temp</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">toLowerCase</span><span class="p">().</span><span class="na">contains</span><span class="p">(</span><span class="n">charSequence</span><span class="p">.</span><span class="na">toString</span><span class="p">().</span><span class="na">toLowerCase</span><span class="p">())){</span>
+                        <span class="n">filteredList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+                    <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">FilterResults</span> <span class="n">filterResults</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FilterResults</span><span class="p">();</span>
+            <span class="n">filterResults</span><span class="p">.</span><span class="na">values</span> <span class="o">=</span> <span class="n">filteredList</span><span class="p">;</span>
+
+            <span class="k">return</span> <span class="n">filterResults</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">//runs on a ui thread</span>
+        <span class="nd">@Override</span>
+        <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">publishResults</span><span class="p">(</span><span class="n">CharSequence</span> <span class="n">charSequence</span><span class="p">,</span> <span class="n">FilterResults</span> <span class="n">filterResults</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">stuff</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+            <span class="n">stuff</span><span class="p">.</span><span class="na">addAll</span><span class="p">((</span><span class="n">Collection</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">StuffInfo</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">filterResults</span><span class="p">.</span><span class="na">values</span><span class="p">);</span>
+            <span class="n">notifyDataSetChanged</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+</code></pre></div>
+
+<h4>링크 사진을 띄워주는 함수인데 아직 미구현 상태임</h4>
+<div class="highlight"><pre><span></span><code> <span class="c1">// 미구현</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">getOGTag</span><span class="p">(</span><span class="n">String</span> <span class="n">url</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 입력받은 url에 해당하는 html을 요청하고 OGTag들을 가져온다.</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;OGT&quot;</span><span class="p">,</span> <span class="s">&quot;url:&quot;</span><span class="o">+</span><span class="n">url</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">url</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">url</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;OGT&quot;</span><span class="p">,</span> <span class="s">&quot;not null&quot;</span><span class="p">);</span>
+                <span class="n">Document</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">Jsoup</span><span class="p">.</span><span class="na">connect</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="na">header</span><span class="p">(</span><span class="s">&quot;User-Agent&quot;</span><span class="p">,</span>
+                        <span class="s">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.82 Safari/537.36&quot;</span><span class="p">)</span>
+                        <span class="p">.</span><span class="na">get</span><span class="p">();</span>
+
+
+                <span class="n">title</span> <span class="o">=</span> <span class="n">doc</span><span class="p">.</span><span class="na">select</span><span class="p">(</span><span class="s">&quot;meta[property=og:title]&quot;</span><span class="p">).</span><span class="na">attr</span><span class="p">(</span><span class="s">&quot;content&quot;</span><span class="p">);</span>  <span class="c1">// 제목</span>
+                <span class="n">contents</span> <span class="o">=</span> <span class="n">doc</span><span class="p">.</span><span class="na">select</span><span class="p">(</span><span class="s">&quot;meta[property=og:description]&quot;</span><span class="p">).</span><span class="na">attr</span><span class="p">(</span><span class="s">&quot;content&quot;</span><span class="p">);</span> <span class="c1">// 내용</span>
+                <span class="n">imageUrl</span> <span class="o">=</span> <span class="n">doc</span><span class="p">.</span><span class="na">select</span><span class="p">(</span><span class="s">&quot;meta[property=og:image]&quot;</span><span class="p">).</span><span class="na">attr</span><span class="p">(</span><span class="s">&quot;content&quot;</span><span class="p">);</span> <span class="c1">// 이미지</span>
+                <span class="c1">//출처: https://javakorea.tistory.com/entry/java-open-graph-구현 [JAVA KOREA]</span>
+            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;OGT&quot;</span><span class="p">,</span> <span class="s">&quot;null&quot;</span><span class="p">);</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;NULL&quot;</span><span class="p">;</span>
+                <span class="n">imageUrl</span> <span class="o">=</span> <span class="s">&quot;https://lh5.googleusercontent.com/-oFz4IlDHPwQ/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmd9yYgEhfF2jqkAh1Vpqzj0K7TCg/s96-c/photo.jpg&quot;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;IOException&quot;</span><span class="p">;</span>
+            <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;OGTError&quot;</span><span class="p">,</span> <span class="s">&quot;Exception occurred&quot;</span><span class="p">);</span>
+            <span class="n">imageUrl</span> <span class="o">=</span> <span class="s">&quot;http://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/16170286697456-f844f74b-c213-4d44-a9a5-3f9a7b3237c2.jpg&quot;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">){</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;parent Exception&quot;</span><span class="p">;</span>
+            <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;OGTError&quot;</span><span class="p">,</span> <span class="s">&quot;Parent Exception occurred&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
