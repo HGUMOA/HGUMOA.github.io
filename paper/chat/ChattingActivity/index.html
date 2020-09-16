@@ -1,0 +1,1778 @@
+
+
+
+<!doctype html>
+<html lang="kr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="HGUMOA">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.5">
+    
+    
+      
+        <title>ChattingActivity - MOA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.63b94e9e.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.7f672a1f.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ffee58">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/gradient-dark.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="yellow" data-md-color-accent="">
+  
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chattingactivity" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="MOA" class="md-header-nav__button md-logo" aria-label="MOA">
+      
+  <img src="../../../assets/images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MOA
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              ChattingActivity
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/HGUMOA/HGUMOA.github.io/" title="저장소로 이동" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HGUMOA
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="MOA" class="md-nav__button md-logo" aria-label="MOA">
+      
+  <img src="../../../assets/images/favicon.png" alt="logo">
+
+    </a>
+    MOA
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/HGUMOA/HGUMOA.github.io/" title="저장소로 이동" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HGUMOA
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      MOA 코드 분석 가이드
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="MOA 코드 분석 가이드" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        MOA 코드 분석 가이드
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Chat
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Chat" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Chat
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ChatAdapter/" title="ChatAdapter" class="md-nav__link">
+      ChatAdapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ChatMessage/" title="ChatMessage" class="md-nav__link">
+      ChatMessage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ChattingActivity
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="ChattingActivity" class="md-nav__link md-nav__link--active">
+      ChattingActivity
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chattingactivity" class="md-nav__link">
+    ChattingActivity
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MakingRoomActivity/" title="MakingRoomActivity" class="md-nav__link">
+      MakingRoomActivity
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Data
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Data" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/MyData/" title="MyData" class="md-nav__link">
+      MyData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/RoomInfo/" title="RoomInfo" class="md-nav__link">
+      RoomInfo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/RoomMemberData/" title="RoomMemberData" class="md-nav__link">
+      RoomMemberData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/StuffInfo/" title="StuffInfo" class="md-nav__link">
+      StuffInfo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Item_page
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Item_page" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Item_page
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../item_page/Food/" title="Food" class="md-nav__link">
+      Food
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../item_page/OTT/" title="OTT" class="md-nav__link">
+      OTT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../item_page/RecyclerAdapter/" title="RecyclerAdapter" class="md-nav__link">
+      RecyclerAdapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../item_page/Stuff/" title="Stuff" class="md-nav__link">
+      Stuff
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../item_page/Taxi/" title="Taxi" class="md-nav__link">
+      Taxi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Main
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Main" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Main
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../main/LoadingAcitvity/" title="LoadingAcitvity" class="md-nav__link">
+      LoadingAcitvity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../main/MainAcitvity/" title="MainAcitvity" class="md-nav__link">
+      MainAcitvity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../main/SearchAcitvity/" title="SearchAcitvity" class="md-nav__link">
+      SearchAcitvity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../main/VPAdapter/" title="VPAdapter" class="md-nav__link">
+      VPAdapter
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Profile
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Profile" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Profile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../profile/BankActivity/" title="BankActivity" class="md-nav__link">
+      BankActivity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../profile/LoginActivity/" title="LoginActivity" class="md-nav__link">
+      LoginActivity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../profile/MyInfo/" title="MyInfo" class="md-nav__link">
+      MyInfo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../profile/MyRoom/" title="MyRoom" class="md-nav__link">
+      MyRoom
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../profile/PhoneNumberActivity/" title="PhoneNumberActivity" class="md-nav__link">
+      PhoneNumberActivity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../profile/ProfileActivity/" title="ProfileActivity" class="md-nav__link">
+      ProfileActivity
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      MOA 파이썬 코드 분석 가이드
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="MOA 파이썬 코드 분석 가이드" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        MOA 파이썬 코드 분석 가이드
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../flask/flask/" title="Flask 코드 분석" class="md-nav__link">
+      Flask 코드 분석
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      MOA design 분석
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="MOA design 분석" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        MOA design 분석
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Login
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Login" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Login
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../design/login/firebase/" title="1. connect with firebase" class="md-nav__link">
+      1. connect with firebase
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../design/login/implement/" title="2. implement login" class="md-nav__link">
+      2. implement login
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Cardview
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Cardview" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Cardview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../design/cardview/adapter/" title="1. connect with firebase" class="md-nav__link">
+      1. connect with firebase
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      App Design
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="App Design" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        App Design
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../design/app%20design/uidesign/" title="1. UI Design" class="md-nav__link">
+      1. UI Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../design/app%20design/uxdesign/" title="2. UX Design" class="md-nav__link">
+      2. UX Design
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      MOA 기능별 refrence
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="MOA 기능별 refrence" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        MOA 기능별 refrence
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reference/frontend/" title="Frontend" class="md-nav__link">
+      Frontend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reference/backend/" title="Backend" class="md-nav__link">
+      Backend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reference/git/" title="Git 협업" class="md-nav__link">
+      Git 협업
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reference/debug/" title="디버깅" class="md-nav__link">
+      디버깅
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      문서 작성 법
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="문서 작성 법" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        문서 작성 법
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../write/markdown/" title="Markdown 파일" class="md-nav__link">
+      Markdown 파일
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chattingactivity" class="md-nav__link">
+    ChattingActivity
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/HGUMOA/HGUMOA.github.io/edit/master/docs/paper/chat/ChattingActivity.md" title="이 페이지를 편집" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                  <h1>ChattingActivity</h1>
+                
+                <h3 id="chattingactivity">ChattingActivity<a class="headerlink" href="#chattingactivity" title="Permanent link">&para;</a></h3>
+<h4>서버에서 Room에 대한 정보 받아서 보여주기</h4>
+<ul>
+<li>void recieveServer() : 서버에서 Room에 대한 정보 받는 함수  </li>
+<li>void settingScreen() : 서버에서 받은 정보를 화면에 띄워주는 함수 </li>
+<li>openWeb(Context context, String url) : 받은 정보중 상품 링트url을 누르면 웹을 띄워주기 </li>
+</ul>
+<h4>서버에서 현재 Room에 있는 사용자들 정보 받아서 보여주기</h4>
+<ul>
+<li>void roomMemberRecieveServer() : DB에서 현재 방에 들어와 있는 참가자들의 정보를 받는다. </li>
+<li>class MyAdapter extends ArrayAdapter<RoomMemberData> : 참가자들의 정보를 화면에 띄워준다. </li>
+<li>void callFunction(String phoneNum) : 참가자들에게 전화를 할 수 있는 기능 </li>
+<li>void setMyProfile() : 내 프로파일 (나의 정보)를 세팅하는 함수 </li>
+</ul>
+<h4>Firebase로부터 message box에 대한 정보 받아서 보여주기</h4>
+<h4>방 나가는 기능</h4>
+<ul>
+<li>void sendServer() : 현재 user가 방을 나갔다는 정보를 DB에 알리는 함수. </li>
+</ul>
+<h4>서버와 통신하기 위해 필요한 변수</h4>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ChattingActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="p">{</span>
+    <span class="c1">// for server</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">urls</span> <span class="o">=</span> <span class="s">&quot;for getting chatting information&quot;</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">roomMemberUrls</span> <span class="o">=</span> <span class="s">&quot;for getting participants information&quot;</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">StuffInfo</span> <span class="n">chattingInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StuffInfo</span><span class="p">();</span>   <span class="c1">// 방 정보를 담는 변수 </span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">roomID</span><span class="p">;</span>  <span class="c1">// 현재 방의 Room id정보 </span>
+</code></pre></div>
+
+<h4>방 정보 확대할 때 필요한 변수</h4>
+<div class="highlight"><pre><span></span><code>  <span class="c1">// for displaying chat page info</span>
+    <span class="kd">private</span> <span class="n">RelativeLayout</span> <span class="n">expandLayout</span><span class="p">;</span> <span class="c1">// 확대하기 </span>
+    <span class="kd">private</span> <span class="n">RelativeLayout</span> <span class="n">previewLayout</span><span class="p">;</span> <span class="c1">// 미리보기 링크 </span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">linkUrl</span><span class="p">;</span> <span class="c1">// 링크 Url</span>
+    <span class="kd">private</span> <span class="n">ImageButton</span> <span class="n">arrowButton</span><span class="p">;</span> <span class="c1">// 확대 버튼 </span>
+</code></pre></div>
+
+<h4>message item들을 보여주기 위한 변수</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// for displaying the message box list</span>
+    <span class="kd">private</span> <span class="n">EditText</span> <span class="n">messageContent</span><span class="p">;</span> <span class="c1">// 사용자가 입력한 메세지 내용 담는 변수 </span>
+    <span class="kd">private</span> <span class="n">Button</span> <span class="n">messageSendButton</span><span class="p">;</span> <span class="c1">// 메세지 보내기 버튼 </span>
+    <span class="kd">private</span> <span class="n">ListView</span> <span class="n">messageList</span><span class="p">;</span>   <span class="c1">// 입력된 이전 메시지 내용 보여주기 위한 ListView</span>
+    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ChatMessageItem</span><span class="o">&gt;</span> <span class="n">messageItems</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span> <span class="c1">// 입력된 이전 메시지 내용을 담고 있는 ArrayList</span>
+    <span class="kd">private</span> <span class="n">ChatAdapter</span> <span class="n">messageAdapter</span><span class="p">;</span> <span class="c1">// Chatting adapter </span>
+    <span class="kd">private</span> <span class="n">FirebaseDatabase</span> <span class="n">firebaseDatabase</span><span class="p">;</span>                           <span class="c1">//Firebase Database 관리 객체참조변수</span>
+    <span class="kd">private</span> <span class="n">DatabaseReference</span> <span class="n">roodIdReference</span><span class="p">;</span>                           <span class="c1">//&#39;chat&#39;노드의 참조객체 참조변수</span>
+</code></pre></div>
+
+<h4>방의 참가자들을 보여주는 기능을 위한 변수</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// for displaying the people list</span>
+    <span class="kd">private</span> <span class="n">DrawerLayout</span> <span class="n">drawerLayout</span><span class="p">;</span>  <span class="c1">// 방 참가자들을 보여주기 위한 layout</span>
+    <span class="kd">private</span> <span class="n">View</span> <span class="n">drawerView</span><span class="p">;</span>    <span class="c1">// 방 참가자들을 보여주기 위한 View</span>
+    <span class="kd">private</span> <span class="n">ListView</span> <span class="n">drawerList</span><span class="p">;</span>    <span class="c1">// 방 참가자들을 보여주기 위한 list</span>
+    <span class="kd">private</span> <span class="n">ActionBarDrawerToggle</span> <span class="n">drawerToggle</span><span class="p">;</span> <span class="c1">// 사용자 목록을 보기위해 눌러야 하는 버튼 </span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">RoomMemberData</span><span class="o">&gt;</span> <span class="n">roomMembers</span> <span class="o">=</span>  <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();;</span> <span class="c1">// 방 참가자들의 정보를 저장하는 ArrayList</span>
+</code></pre></div>
+
+<h4>방의 기본적인 기능을 위한 변수</h4>
+<div class="highlight"><pre><span></span><code>        <span class="kd">private</span> <span class="n">Toolbar</span> <span class="n">toolbar</span><span class="p">;</span>        <span class="c1">// 툴바 </span>
+    <span class="kd">private</span> <span class="n">ImageButton</span> <span class="n">backButton</span><span class="p">;</span> <span class="c1">// 뒤로가기 버튼 </span>
+    <span class="kd">private</span> <span class="n">ImageButton</span> <span class="n">exitRoom</span><span class="p">;</span>   <span class="c1">// 방나가기 버튼 </span>
+</code></pre></div>
+
+<h4>생성자 &amp; 방의 초기 정보 받아오기 (room id, my profile, room info)</h4>
+<ul>
+<li>setMyProfile() : my profile setting할때 사용되는 함수</li>
+<li>recieveServer() : 방의 정보를 DB로부터 받아오는 함수 </li>
+</ul>
+<div class="highlight"><pre><span></span><code>        <span class="kd">public</span> <span class="nf">ChattingActivity</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">activity_chatting</span><span class="p">);</span>
+
+        <span class="c1">// room id정보를 intent로 넘겨 받는다. 만약 room id를 받지 못한다면 default값으로 1을 설정함. </span>
+        <span class="n">Intent</span> <span class="n">secondIntent</span> <span class="o">=</span> <span class="n">getIntent</span><span class="p">();</span>
+        <span class="n">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">secondIntent</span><span class="p">.</span><span class="na">getStringExtra</span><span class="p">(</span><span class="s">&quot;test_id&quot;</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">message</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">roomID</span> <span class="o">=</span> <span class="s">&quot;1&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="n">roomID</span> <span class="o">=</span> <span class="n">message</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">setMyProfile</span><span class="p">();</span> <span class="c1">// 대화 참여자 페이지에서 내 프로필 설정</span>
+        <span class="n">recieveServer</span><span class="p">();</span>    <span class="c1">// Room에 대한 정보를 서버로부터 받는다. </span>
+</code></pre></div>
+
+<h4>방 정보 펼치기 버튼(arrowButton)을 눌렀을 때, expandLayout가 보여지면서 방의 정보가 펼쳐져서 보여지기</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//* post bar, chat page information</span>
+        <span class="n">expandLayout</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_expand_layout</span><span class="p">);</span>
+        <span class="n">arrowButton</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_arrow_button</span><span class="p">);</span>
+        <span class="n">arrowButton</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">view</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">expandLayout</span><span class="p">.</span><span class="na">getVisibility</span><span class="p">()</span><span class="o">==</span><span class="n">View</span><span class="p">.</span><span class="na">GONE</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">expandLayout</span><span class="p">.</span><span class="na">setVisibility</span><span class="p">(</span><span class="n">View</span><span class="p">.</span><span class="na">VISIBLE</span><span class="p">);</span>
+                    <span class="n">arrowButton</span><span class="p">.</span><span class="na">setImageResource</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">upbutton</span><span class="p">);</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">expandLayout</span><span class="p">.</span><span class="na">setVisibility</span><span class="p">(</span><span class="n">View</span><span class="p">.</span><span class="na">GONE</span><span class="p">);</span>
+                    <span class="n">arrowButton</span><span class="p">.</span><span class="na">setImageResource</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">downbutton</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+</code></pre></div>
+
+<h4>previewLayout이 눌린 경우, 웹페이지로 링크가 넘어가도록 하는 기능</h4>
+<ul>
+<li>openWeb(getApplicationContext(), linkUrl) : 웹페이지 보여줄때 호출하는 함수 </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">//* Link 미리보기 누르면 Web으로 연결</span>
+        <span class="n">previewLayout</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_postpreview_layout</span><span class="p">);</span>
+        <span class="n">previewLayout</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">view</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">openWeb</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span> <span class="n">linkUrl</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+</code></pre></div>
+
+<h4>사용자가 입력한 메시지를 messageContent 변수에 담아서 messageSendButton이 눌린 경우 firebaseDB에 정보를 보내주는 기능</h4>
+<p>즉 사용자에게 메시지 content를 입력받아 그 메시지를 보내는 기능 </p>
+<div class="highlight"><pre><span></span><code><span class="c1">//* send message</span>
+        <span class="n">messageContent</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_message_content_edit</span><span class="p">);</span>
+        <span class="n">messageSendButton</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_sendbutton</span><span class="p">);</span>
+        <span class="n">messageSendButton</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">//firebase DB에 저장할 값들( 닉네임, 메세지, 시간)</span>
+                <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">MyData</span><span class="p">.</span><span class="na">name</span><span class="p">;</span>
+                <span class="n">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">messageContent</span><span class="p">.</span><span class="na">getText</span><span class="p">().</span><span class="na">toString</span><span class="p">();</span>
+                <span class="c1">//메세지 작성 시간 문자열로 바꿔주기 </span>
+                <span class="n">Calendar</span> <span class="n">calendar</span> <span class="o">=</span> <span class="n">Calendar</span><span class="p">.</span><span class="na">getInstance</span><span class="p">();</span> <span class="c1">//현재 시간을 가지고 있는 객체</span>
+                <span class="n">String</span> <span class="n">time</span> <span class="o">=</span> <span class="n">calendar</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Calendar</span><span class="p">.</span><span class="na">HOUR_OF_DAY</span><span class="p">)</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">calendar</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Calendar</span><span class="p">.</span><span class="na">MINUTE</span><span class="p">);</span> <span class="c1">//14:16</span>
+
+                <span class="c1">//firebase DB에 저장할 값(MessageItem객체) 설정</span>
+                <span class="n">ChatMessageItem</span> <span class="n">messageItem</span><span class="o">=</span> <span class="k">new</span> <span class="n">ChatMessageItem</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">message</span><span class="p">,</span><span class="n">time</span><span class="p">);</span>
+                <span class="c1">//&#39;char&#39;노드에 MessageItem객체를 통해 데이터를 저장하기.</span>
+                <span class="n">roodIdReference</span><span class="p">.</span><span class="na">push</span><span class="p">().</span><span class="na">setValue</span><span class="p">(</span><span class="n">messageItem</span><span class="p">);</span>
+
+                <span class="c1">//EditText에 있는 글씨 지우기</span>
+                <span class="n">messageContent</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+
+                <span class="c1">//소프트키패드를 안보이도록하는 코드 </span>
+                <span class="n">InputMethodManager</span> <span class="n">imm</span> <span class="o">=</span> <span class="p">(</span><span class="n">InputMethodManager</span><span class="p">)</span> <span class="n">getSystemService</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="na">INPUT_METHOD_SERVICE</span><span class="p">);</span>
+                <span class="n">imm</span><span class="p">.</span><span class="na">hideSoftInputFromWindow</span><span class="p">(</span><span class="n">getCurrentFocus</span><span class="p">().</span><span class="na">getWindowToken</span><span class="p">(),</span><span class="mi">0</span><span class="p">);</span>
+
+                <span class="c1">//처음 시작할때 EditText가 다른 뷰들보다 우선시 되어 포커스를 받아 버림.</span>
+                <span class="c1">//즉, 시작부터 소프트 키패드가 올라와 있음.</span>
+                <span class="c1">//그게 싫으면...다른 뷰가 포커스를 가지도록</span>
+                <span class="c1">//즉, EditText를 감싼 Layout에게 포커스를 가지도록 속성을 추가!![[XML에]</span>
+
+            <span class="p">}</span>
+        <span class="p">});</span>
+</code></pre></div>
+
+<h4>메시지 박스를 화면에 띄워주는 역할</h4>
+<div class="highlight"><pre><span></span><code> <span class="c1">//* show message list</span>
+        <span class="n">messageList</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_message_listview</span><span class="p">);</span>
+        <span class="n">messageAdapter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChatAdapter</span><span class="p">(</span><span class="n">messageItems</span><span class="p">,</span><span class="n">getLayoutInflater</span><span class="p">());</span>
+        <span class="n">messageList</span><span class="p">.</span><span class="na">setAdapter</span><span class="p">(</span><span class="n">messageAdapter</span><span class="p">);</span>
+</code></pre></div>
+
+<h4>s Firebase DB관리 객체 및 현재 Room id 정보로 참조 객체 얻어 오기</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Firebase DB관리 객체와 &#39;Rood id&#39;노드 참조객체 얻어오기</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">FirebaseApp</span><span class="p">.</span><span class="na">getApps</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="na">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="n">FirebaseDatabase</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">setPersistenceEnabled</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">firebaseDatabase</span> <span class="o">=</span> <span class="n">FirebaseDatabase</span><span class="p">.</span><span class="na">getInstance</span><span class="p">();</span>
+
+        <span class="n">roodIdReference</span> <span class="o">=</span> <span class="n">firebaseDatabase</span><span class="p">.</span><span class="na">getReference</span><span class="p">(</span><span class="n">roomID</span><span class="p">);</span>
+        <span class="n">roodIdReference</span><span class="p">.</span><span class="na">keepSynced</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</code></pre></div>
+
+<h4>실시간으로 firebaseDB에 업데이트 되고 있는 채팅 메시지들을 읽어와서 messageItems에 정보를 추가하고 리스트 뷰를 갱신해주기</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// firebaseDB에서 채팅 메세지들 실시간 읽어오기..</span>
+        <span class="c1">// &#39;Room id&#39;노드에 저장되어 있는 데이터들을 읽어오기</span>
+        <span class="c1">// chatRef에 데이터가 변경되는 것으 듣는 리스너 추가</span>
+        <span class="n">roodIdReference</span><span class="p">.</span><span class="na">addChildEventListener</span><span class="p">(</span><span class="k">new</span> <span class="n">ChildEventListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">//새로 추가된 것만 줌 ValueListener는 하나의 값만 바뀌어도 처음부터 다시 값을 줌</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onChildAdded</span><span class="p">(</span><span class="nd">@NonNull</span> <span class="n">DataSnapshot</span> <span class="n">dataSnapshot</span><span class="p">,</span> <span class="nd">@Nullable</span> <span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">//새로 추가된 데이터(값 : MessageItem 객체) 가져오기</span>
+                <span class="n">ChatMessageItem</span> <span class="n">messageItem</span> <span class="o">=</span> <span class="n">dataSnapshot</span><span class="p">.</span><span class="na">getValue</span><span class="p">(</span><span class="n">ChatMessageItem</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+                <span class="c1">//새로운 메세지를 리스뷰에 추가하기 위해 ArrayList에 추가</span>
+                <span class="n">messageItems</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">messageItem</span><span class="p">);</span>
+
+                <span class="c1">//리스트뷰를 갱신</span>
+                <span class="n">messageAdapter</span><span class="p">.</span><span class="na">notifyDataSetChanged</span><span class="p">();</span>
+                <span class="n">messageList</span><span class="p">.</span><span class="na">setSelection</span><span class="p">(</span><span class="n">messageItems</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//리스트뷰의 마지막 위치로 스크롤 위치 이동</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onChildChanged</span><span class="p">(</span><span class="nd">@NonNull</span> <span class="n">DataSnapshot</span> <span class="n">dataSnapshot</span><span class="p">,</span> <span class="nd">@Nullable</span> <span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onChildRemoved</span><span class="p">(</span><span class="nd">@NonNull</span> <span class="n">DataSnapshot</span> <span class="n">dataSnapshot</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onChildMoved</span><span class="p">(</span><span class="nd">@NonNull</span> <span class="n">DataSnapshot</span> <span class="n">dataSnapshot</span><span class="p">,</span> <span class="nd">@Nullable</span> <span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCancelled</span><span class="p">(</span><span class="nd">@NonNull</span> <span class="n">DatabaseError</span> <span class="n">databaseError</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+        <span class="p">});</span>
+</code></pre></div>
+
+<h4>만약 peopleListButton이 눌린 경우 roomMemberRecieveServer함수를 이용해 현재 참가자 목록 정보를 DB에서 받고 Drawer Layout을 open하여 화면에 보여준다.</h4>
+<ul>
+<li>roomMemberRecieveServer() : DB로부터 방에 참여하고 있는 사용자들의 정보를 받아오는 함수</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">//* show people list - Drawer Layout Open and Close with buttons</span>
+        <span class="n">drawerList</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_ppl_listview</span><span class="p">);</span>          <span class="c1">//Drawer View에서 방 참가자 리스트</span>
+        <span class="n">drawerLayout</span> <span class="o">=</span> <span class="p">(</span><span class="n">DrawerLayout</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_drawerlayout</span><span class="p">);</span>
+        <span class="n">drawerView</span> <span class="o">=</span> <span class="p">(</span><span class="n">View</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_drawer</span><span class="p">);</span>
+
+        <span class="n">ImageButton</span> <span class="n">peopleListButton</span> <span class="o">=</span> <span class="p">(</span><span class="n">ImageButton</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_drawer_button</span><span class="p">);</span>
+        <span class="n">peopleListButton</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">view</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">roomMemberRecieveServer</span><span class="p">();</span>
+                <span class="n">drawerLayout</span><span class="p">.</span><span class="na">openDrawer</span><span class="p">(</span><span class="n">drawerView</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+</code></pre></div>
+
+<h4>closeButton을 누른 경우, Drawer Layout을 close해준다</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// 펼쳤던 참가자 리스트 닫기 </span>
+        <span class="n">ImageButton</span> <span class="n">closeButton</span> <span class="o">=</span> <span class="p">(</span><span class="n">ImageButton</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_drawer_closebutton</span><span class="p">);</span>
+        <span class="n">closeButton</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">view</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">drawerLayout</span><span class="p">.</span><span class="na">closeDrawers</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+</code></pre></div>
+
+<h4>toolbar를 숨긴다</h4>
+<div class="highlight"><pre><span></span><code> <span class="c1">//* hide tool bar State Title</span>
+        <span class="n">toolbar</span> <span class="o">=</span> <span class="p">(</span><span class="n">Toolbar</span><span class="p">)</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_toolbar</span><span class="p">);</span>
+        <span class="n">setSupportActionBar</span><span class="p">(</span><span class="n">toolbar</span><span class="p">);</span>
+        <span class="n">getSupportActionBar</span><span class="p">().</span><span class="na">setDisplayShowTitleEnabled</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</code></pre></div>
+
+<h4>backButton이 눌린경우, 이전 페이지로 돌아간다</h4>
+<div class="highlight"><pre><span></span><code> <span class="c1">//* back page</span>
+        <span class="n">backButton</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_backbutton</span><span class="p">);</span>
+        <span class="n">backButton</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Intent</span> <span class="n">intent2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="p">(</span><span class="n">ChattingActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span> <span class="n">MainActivity</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+                <span class="n">startActivity</span><span class="p">(</span><span class="n">intent2</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+</code></pre></div>
+
+<h4>exitRoom버튼을 user는 누른경우 방을 나가게 된다.</h4>
+<ul>
+<li>sendServer() : user가 방을 나갔다는 것을 DB에게 알린다. </li>
+</ul>
+<div class="highlight"><pre><span></span><code> <span class="c1">//* exit room</span>
+        <span class="n">exitRoom</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_exitroom</span><span class="p">);</span>
+        <span class="n">exitRoom</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">sendServer</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4>s 나의 정보를 화면에 띄워주는 함수이다.</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//* when set my profile</span>
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">setMyProfile</span><span class="p">(){</span>
+    <span class="n">ImageView</span> <span class="n">myImage</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_myprofile_iv</span><span class="p">);</span>
+    <span class="n">TextView</span> <span class="n">myName</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_myname_tv</span><span class="p">);</span>
+
+    <span class="n">myImage</span><span class="p">.</span><span class="na">setImageResource</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">profileicon2</span><span class="p">);</span>
+    <span class="n">myName</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">MyData</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4>방 정보를 화면에 세팅해주는 함수이다.</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//* when set chat page information</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">settingScreen</span><span class="p">(){</span>
+    <span class="n">TextView</span> <span class="n">chatpage_title_textview</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_title_textview</span><span class="p">);</span>
+    <span class="n">chatpage_title_textview</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">chattingInfo</span><span class="p">.</span><span class="na">getTitle</span><span class="p">());</span>
+
+    <span class="n">TextView</span> <span class="n">chatpage_date_textview</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_date_textview</span><span class="p">);</span>
+    <span class="n">chatpage_date_textview</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">chattingInfo</span><span class="p">.</span><span class="na">getOrderDate</span><span class="p">());</span>
+
+    <span class="n">TextView</span> <span class="n">chatpage_time_textview</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_time_textview</span><span class="p">);</span>
+    <span class="n">chatpage_time_textview</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">chattingInfo</span><span class="p">.</span><span class="na">getOrderTime</span><span class="p">());</span>
+
+    <span class="n">TextView</span> <span class="n">chatpage_place_textview</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_place_textview</span><span class="p">);</span>
+    <span class="n">chatpage_place_textview</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">chattingInfo</span><span class="p">.</span><span class="na">getPlace</span><span class="p">());</span>
+
+    <span class="n">TextView</span> <span class="n">chatpage_name_textview</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_name_textview</span><span class="p">);</span>
+    <span class="n">chatpage_name_textview</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">chattingInfo</span><span class="p">.</span><span class="na">getCreatorName</span><span class="p">());</span>
+
+    <span class="n">TextView</span> <span class="n">chatpage_pplnumber_textview</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_pplnumber_textview</span><span class="p">);</span>
+    <span class="n">chatpage_pplnumber_textview</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">chattingInfo</span><span class="p">.</span><span class="na">getNumUsers</span><span class="p">());</span>
+
+    <span class="n">linkUrl</span> <span class="o">=</span> <span class="n">chattingInfo</span><span class="p">.</span><span class="na">getStuffLink</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4>링크를 웹페이지에 연결하는 함수이다.</h4>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">openWeb</span><span class="p">(</span><span class="n">Context</span> <span class="n">context</span><span class="p">,</span> <span class="n">String</span> <span class="n">url</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">url</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;http://&quot;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">url</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;https://&quot;</span><span class="p">))</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;http://&quot;</span> <span class="o">+</span> <span class="n">url</span><span class="p">;</span>
+
+    <span class="c1">// Parse the URI and create the intent.</span>
+    <span class="n">Uri</span> <span class="n">webPage</span> <span class="o">=</span> <span class="n">Uri</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+    <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="na">ACTION_VIEW</span><span class="p">,</span> <span class="n">webPage</span><span class="p">);</span>
+
+    <span class="c1">// Find an activity to hand the intent and start that activity.</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">intent</span><span class="p">.</span><span class="na">resolveActivity</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="na">getPackageManager</span><span class="p">())</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">context</span><span class="p">.</span><span class="na">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="s">&quot;Wrong Address. Try again.&quot;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+        <span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="s">&quot;ImplicitIntents&quot;</span><span class="p">,</span> <span class="s">&quot;Can&#39;t handle this intent!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4>DB로부터 방정보를 받아오는 함수.</h4>
+<div class="highlight"><pre><span></span><code>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">recieveServer</span><span class="p">(){</span>
+        <span class="kd">class</span> <span class="nc">sendData</span> <span class="kd">extends</span> <span class="n">AsyncTask</span><span class="o">&lt;</span><span class="n">Void</span><span class="p">,</span> <span class="n">Void</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPreExecute</span><span class="p">()</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onPreExecute</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPostExecute</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onPostExecute</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+                <span class="n">settingScreen</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onProgressUpdate</span><span class="p">(</span><span class="n">Void</span><span class="p">...</span> <span class="n">values</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onProgressUpdate</span><span class="p">(</span><span class="n">values</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCancelled</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onCancelled</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCancelled</span><span class="p">()</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onCancelled</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="n">String</span> <span class="nf">doInBackground</span><span class="p">(</span><span class="n">Void</span><span class="p">...</span> <span class="n">voids</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">try</span> <span class="p">{</span>
+                    <span class="n">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="p">();</span>
+
+                    <span class="n">JSONObject</span> <span class="n">jsonInput</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="p">();</span>
+                    <span class="n">jsonInput</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;room_id&quot;</span><span class="p">,</span> <span class="n">roomID</span><span class="p">);</span>
+                    <span class="n">jsonInput</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;user_email&quot;</span><span class="p">,</span> <span class="n">MyData</span><span class="p">.</span><span class="na">mail</span><span class="p">);</span>
+
+                    <span class="n">RequestBody</span> <span class="n">reqBody</span> <span class="o">=</span> <span class="n">RequestBody</span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+                            <span class="n">MediaType</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="s">&quot;application/json; charset=utf-8&quot;</span><span class="p">),</span>
+                            <span class="n">jsonInput</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span>
+                    <span class="p">);</span>
+
+                    <span class="n">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+                            <span class="p">.</span><span class="na">post</span><span class="p">(</span><span class="n">reqBody</span><span class="p">)</span>
+                            <span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="n">urls</span><span class="p">)</span>
+                            <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+                    <span class="n">Response</span> <span class="n">responses</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+                    <span class="n">responses</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
+
+                    <span class="c1">//json array로 받아서 파싱수 thing에 저장해준다.</span>
+                    <span class="c1">// 가장 큰 JSONObject를 가져옵니다.</span>
+                    <span class="n">JSONObject</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="p">(</span><span class="n">responses</span><span class="p">.</span><span class="na">body</span><span class="p">().</span><span class="na">string</span><span class="p">());</span>
+                    <span class="n">chattingInfo</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;title&quot;</span><span class="p">));</span>
+                    <span class="n">chattingInfo</span><span class="p">.</span><span class="na">setOrderDate</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;order_date&quot;</span><span class="p">));</span>
+                    <span class="n">chattingInfo</span><span class="p">.</span><span class="na">setOrderTime</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;order_time&quot;</span><span class="p">));</span>
+                    <span class="n">chattingInfo</span><span class="p">.</span><span class="na">setPlace</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;place&quot;</span><span class="p">));</span>
+                    <span class="n">chattingInfo</span><span class="p">.</span><span class="na">setNumUsers</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;num_users&quot;</span><span class="p">));</span>
+                    <span class="n">chattingInfo</span><span class="p">.</span><span class="na">setStuffCost</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;stuff_cost&quot;</span><span class="p">)</span><span class="o">+</span><span class="s">&quot;원&quot;</span><span class="p">);</span>
+                    <span class="n">chattingInfo</span><span class="p">.</span><span class="na">setStuffLink</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;stuff_link&quot;</span><span class="p">));</span>
+                    <span class="n">chattingInfo</span><span class="p">.</span><span class="na">setCreatorName</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;creator_name&quot;</span><span class="p">));</span>
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">JSONException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">sendData</span> <span class="n">sendData</span> <span class="o">=</span> <span class="k">new</span> <span class="n">sendData</span><span class="p">();</span>
+        <span class="n">sendData</span><span class="p">.</span><span class="na">execute</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4>방 참가자들의 정보를 받아서 화면에 리스트로 띄워주는 내부 클래스</h4>
+<div class="highlight"><pre><span></span><code>    <span class="c1">//* when show people list</span>
+    <span class="kd">class</span> <span class="nc">MyAdapter</span> <span class="kd">extends</span> <span class="n">ArrayAdapter</span><span class="o">&lt;</span><span class="n">RoomMemberData</span><span class="o">&gt;</span> <span class="p">{</span>
+
+        <span class="n">Context</span> <span class="n">context</span><span class="p">;</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">RoomMemberData</span><span class="o">&gt;</span> <span class="n">rRoomMembers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+        <span class="n">MyAdapter</span> <span class="p">(</span><span class="n">Context</span> <span class="n">c</span><span class="p">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">RoomMemberData</span><span class="o">&gt;</span> <span class="n">roomMembers</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">super</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">chatpage_ppl_row</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_pplname_tv</span><span class="p">,</span> <span class="n">roomMembers</span><span class="p">);</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">context</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">rRoomMembers</span> <span class="o">=</span> <span class="n">roomMembers</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="nd">@NonNull</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">View</span> <span class="nf">getView</span><span class="p">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">position</span><span class="p">,</span> <span class="nd">@Nullable</span> <span class="n">View</span> <span class="n">convertView</span><span class="p">,</span> <span class="nd">@NonNull</span> <span class="n">ViewGroup</span> <span class="n">parent</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">LayoutInflater</span> <span class="n">layoutInflater</span> <span class="o">=</span> <span class="p">(</span><span class="n">LayoutInflater</span><span class="p">)</span><span class="n">getApplicationContext</span><span class="p">().</span><span class="na">getSystemService</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="na">LAYOUT_INFLATER_SERVICE</span><span class="p">);</span>
+            <span class="n">View</span> <span class="n">row</span> <span class="o">=</span> <span class="n">layoutInflater</span><span class="p">.</span><span class="na">inflate</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">chatpage_ppl_row</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+            <span class="n">ImageView</span> <span class="n">images</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_otherprofile_iv</span><span class="p">);</span>
+            <span class="n">TextView</span> <span class="n">name</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_pplname_tv</span><span class="p">);</span>
+            <span class="n">ImageButton</span> <span class="n">phone</span> <span class="o">=</span> <span class="n">row</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">chatpage_phone_button</span><span class="p">);</span>
+
+            <span class="c1">//setting resources on views</span>
+            <span class="n">images</span><span class="p">.</span><span class="na">setImageResource</span><span class="p">(</span> <span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">profileicon2</span><span class="p">);</span>
+            <span class="n">name</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">rRoomMembers</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getName</span><span class="p">());</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">rRoomMembers</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getPhonNumber</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;null&quot;</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;phone&quot;</span><span class="p">,</span> <span class="s">&quot;null input&quot;</span><span class="p">);</span>
+                <span class="n">phone</span><span class="p">.</span><span class="na">setVisibility</span><span class="p">(</span><span class="n">View</span><span class="p">.</span><span class="na">GONE</span><span class="p">);</span>
+            <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+                <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;phone&quot;</span><span class="p">,</span> <span class="n">rRoomMembers</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getPhonNumber</span><span class="p">());</span>
+            <span class="p">}</span>
+
+            <span class="n">phone</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span> <span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nd">@Override</span>
+                <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">View</span> <span class="n">view</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">callFunction</span><span class="p">(</span><span class="n">rRoomMembers</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">position</span><span class="p">).</span><span class="na">getPhonNumber</span><span class="p">());</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+            <span class="c1">//phone.setId(Integer.parseInt(rRoomMembers.get(position).getPhonNumber()));</span>
+            <span class="k">return</span> <span class="n">row</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4>전화 함수</h4>
+<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">callFunction</span><span class="p">(</span><span class="n">String</span> <span class="n">phoneNum</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;phoneNum&quot;</span><span class="p">,</span> <span class="n">phoneNum</span><span class="p">);</span>
+
+        <span class="c1">// Get the string indicating a location. Input is not validated; it is</span>
+        <span class="c1">// passed to the location handler intact.</span>
+
+        <span class="c1">// Parse the location and create the intent.</span>
+        <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="na">ACTION_DIAL</span><span class="p">,</span> <span class="n">Uri</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="s">&quot;tel:/&quot;</span> <span class="o">+</span> <span class="n">phoneNum</span><span class="p">));</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">intent</span><span class="p">.</span><span class="na">resolveActivity</span><span class="p">(</span><span class="n">getPackageManager</span><span class="p">())</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">&quot;Wrong Number. Try again.&quot;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+            <span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="s">&quot;ImplicitIntents&quot;</span><span class="p">,</span> <span class="s">&quot;Can&#39;t handle this intent!&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4>방 참가자들의 정보를 받는 함수</h4>
+<div class="highlight"><pre><span></span><code>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">roomMemberRecieveServer</span><span class="p">(){</span>
+        <span class="kd">class</span> <span class="nc">sendData</span> <span class="kd">extends</span> <span class="n">AsyncTask</span><span class="o">&lt;</span><span class="n">Void</span><span class="p">,</span> <span class="n">Void</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPreExecute</span><span class="p">()</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onPreExecute</span><span class="p">();</span>
+                <span class="n">roomMembers</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPostExecute</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onPostExecute</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+                <span class="n">MyAdapter</span> <span class="n">adapter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyAdapter</span><span class="p">(</span><span class="n">ChattingActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span> <span class="n">roomMembers</span><span class="p">);</span>
+                <span class="n">drawerList</span><span class="p">.</span><span class="na">setAdapter</span><span class="p">(</span><span class="n">adapter</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onProgressUpdate</span><span class="p">(</span><span class="n">Void</span><span class="p">...</span> <span class="n">values</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onProgressUpdate</span><span class="p">(</span><span class="n">values</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCancelled</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onCancelled</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCancelled</span><span class="p">()</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onCancelled</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="n">String</span> <span class="nf">doInBackground</span><span class="p">(</span><span class="n">Void</span><span class="p">...</span> <span class="n">voids</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">try</span> <span class="p">{</span>
+                    <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;menuMem&quot;</span><span class="p">,</span> <span class="s">&quot;started&quot;</span><span class="p">);</span>
+                    <span class="n">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="p">();</span>
+
+                    <span class="n">JSONObject</span> <span class="n">jsonInput</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="p">();</span>
+                    <span class="n">jsonInput</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;room_id&quot;</span><span class="p">,</span> <span class="n">roomID</span><span class="p">);</span>
+                    <span class="n">jsonInput</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;me&quot;</span><span class="p">,</span> <span class="n">MyData</span><span class="p">.</span><span class="na">mail</span><span class="p">);</span>
+
+                    <span class="n">RequestBody</span> <span class="n">reqBody</span> <span class="o">=</span> <span class="n">RequestBody</span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+                            <span class="n">MediaType</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="s">&quot;application/json; charset=utf-8&quot;</span><span class="p">),</span>
+                            <span class="n">jsonInput</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span>
+                    <span class="p">);</span>
+
+                    <span class="n">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+                            <span class="p">.</span><span class="na">post</span><span class="p">(</span><span class="n">reqBody</span><span class="p">)</span>
+                            <span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="n">roomMemberUrls</span><span class="p">)</span>
+                            <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+                    <span class="n">Response</span> <span class="n">responses</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+                    <span class="n">responses</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
+
+                    <span class="n">JSONObject</span> <span class="n">jObject</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="p">(</span><span class="n">responses</span><span class="p">.</span><span class="na">body</span><span class="p">().</span><span class="na">string</span><span class="p">());</span>
+                    <span class="n">JSONArray</span> <span class="n">jArray</span> <span class="o">=</span> <span class="n">jObject</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">&quot;roomMembers&quot;</span><span class="p">);</span>
+
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">jArray</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">JSONObject</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">jArray</span><span class="p">.</span><span class="na">getJSONObject</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+                        <span class="n">RoomMemberData</span> <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RoomMemberData</span><span class="p">();</span>
+                        <span class="n">temp</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">));</span>
+                        <span class="n">temp</span><span class="p">.</span><span class="na">setMail</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">));</span>
+                        <span class="n">temp</span><span class="p">.</span><span class="na">setPhonNumber</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;phone&quot;</span><span class="p">));</span>
+                        <span class="n">temp</span><span class="p">.</span><span class="na">setPhotoUrl</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;photo_url&quot;</span><span class="p">));</span>
+
+                        <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;menuMem&quot;</span><span class="p">,</span> <span class="n">obj</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">));</span>
+                        <span class="n">roomMembers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;menuMem&quot;</span><span class="p">,</span> <span class="s">&quot;leave for&quot;</span><span class="p">);</span>
+
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">JSONException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">sendData</span> <span class="n">sendData</span> <span class="o">=</span> <span class="k">new</span> <span class="n">sendData</span><span class="p">();</span>
+        <span class="n">sendData</span><span class="p">.</span><span class="na">execute</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4>user가 방을 나갔을 때 DB에게 알려주는 함수</h4>
+<div class="highlight"><pre><span></span><code> <span class="c1">//* user exit room</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendServer</span><span class="p">(){</span>
+        <span class="kd">class</span> <span class="nc">sendData</span> <span class="kd">extends</span> <span class="n">AsyncTask</span><span class="o">&lt;</span><span class="n">Void</span><span class="p">,</span> <span class="n">Void</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPostExecute</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">super</span><span class="p">.</span><span class="na">onPostExecute</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+                <span class="n">Intent</span> <span class="n">intent3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="p">(</span><span class="n">ChattingActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span> <span class="n">MainActivity</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+                <span class="n">startActivity</span><span class="p">(</span><span class="n">intent3</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">protected</span> <span class="n">String</span> <span class="nf">doInBackground</span><span class="p">(</span><span class="n">Void</span><span class="p">...</span> <span class="n">voids</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">try</span> <span class="p">{</span>
+                    <span class="n">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="p">();</span>
+                    <span class="n">JSONObject</span> <span class="n">jsonInput</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="p">();</span>
+
+                    <span class="n">jsonInput</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;user_email&quot;</span><span class="p">,</span> <span class="n">MyData</span><span class="p">.</span><span class="na">mail</span><span class="p">);</span>
+                    <span class="n">jsonInput</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;room_id&quot;</span><span class="p">,</span> <span class="n">roomID</span><span class="p">);</span>
+
+                    <span class="n">RequestBody</span> <span class="n">reqBody</span> <span class="o">=</span> <span class="n">RequestBody</span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+                            <span class="n">MediaType</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="s">&quot;application/json; charset=utf-8&quot;</span><span class="p">),</span>
+                            <span class="n">jsonInput</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span>
+                    <span class="p">);</span>
+
+                    <span class="n">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+                            <span class="p">.</span><span class="na">delete</span><span class="p">(</span><span class="n">reqBody</span><span class="p">)</span>
+                            <span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="n">urls</span><span class="p">)</span>
+                            <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+                    <span class="n">Response</span> <span class="n">responses</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+                    <span class="n">responses</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
+
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">JSONException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">sendData</span> <span class="n">sendData</span> <span class="o">=</span> <span class="k">new</span> <span class="n">sendData</span><span class="p">();</span>
+        <span class="n">sendData</span><span class="p">.</span><span class="na">execute</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../ChatMessage/" title="ChatMessage" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  이전
+                </span>
+                ChatMessage
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../MakingRoomActivity/" title="MakingRoomActivity" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  다음
+                </span>
+                MakingRoomActivity
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019- HGUMOA
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/HGUMOA/MOA" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="../../../javascripts/all.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
